@@ -34,7 +34,7 @@ void main() {
   // int g = 0 // 0
   g = 10; // null이 아니고 10
 
-  double tax = 1.1; // 세금
+  final double tax = 1.1; // 세금
   int fax = 5;  // 가격
   print('$fax만원 짜리를 4만원으로 할인합니다.');
   // tax = 4;
