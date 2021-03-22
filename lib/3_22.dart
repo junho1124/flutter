@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:io';
 //main 메서드 혹은 함수라고 부름
 void main() {
   // exam 함수를 실행
@@ -45,7 +46,7 @@ void main() {
   fax = 4;
   print('팩스의 새로운 가격은(세금포함 ${fax * tax}만원!');
 
-  dice();
+  finalexam();
 }
 //exam1 함수를 만들었다.
 
@@ -110,3 +111,19 @@ void dice() {
       print(rng.nextInt(6) + 1);  //1-6까지
     }
   }
+
+void finalexam() {
+  print('점을 보세요.');
+  print('이름을 입력 해 주세요.');
+    String name = stdin.readLineSync();
+    stdout.write(name);
+  print('나이를 입력 해 주세요.');
+    String yourage = stdin.readLineSync();
+    stdout.write(yourage);
+    int age = int.parse('yourage');
+  Random A = Random(); {
+    print(A.nextInt(3) + 1);
+    int fortune = int.parse('A');
+  }
+  print('점괴가 나왔습니다!');
+}
