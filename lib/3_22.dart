@@ -41,4 +41,6 @@ void main() {
   fax = 4;
   print('팩스의 새로운 가격은(세금포함 ${fax * tax}만원!');
 
+
+
 }
