@@ -19,7 +19,7 @@ void main() {
 
 //  [진워 (참, 거짓)]
   bool isMarried = true;
-  isMarried = false;
+  bool Married = false;
 
 //  목록
 
