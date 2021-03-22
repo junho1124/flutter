@@ -1,3 +1,4 @@
+import 'dart:math';
 //main 메서드 혹은 함수라고 부름
 void main() {
   // exam 함수를 실행
@@ -43,8 +44,8 @@ void main() {
   // tax = 4;
   fax = 4;
   print('팩스의 새로운 가격은(세금포함 ${fax * tax}만원!');
-  exam();
-  sample();
+
+  dice();
 }
 //exam1 함수를 만들었다.
 
@@ -103,3 +104,9 @@ void sample() {
     print('보가 작다.');
   }
 }
+
+void dice() {
+    Random rng = Random(); {
+      print(rng.nextInt(6) + 1);  //1-6까지
+    }
+  }
