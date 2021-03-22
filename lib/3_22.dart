@@ -1,5 +1,7 @@
 //main 메서드 혹은 함수라고 부름
 void main() {
+  // exam 함수를 실행
+
 //변수의 이름은 영어, _, 숫자 등으로 만든다.
   int a = 10; // 잘못된 이름
   //잘 된 이름(camel case)
@@ -41,20 +43,18 @@ void main() {
   // tax = 4;
   fax = 4;
   print('팩스의 새로운 가격은(세금포함 ${fax * tax}만원!');
+  exam();
+  sample();
 }
 //exam1 함수를 만들었다.
 
-  // exam 함수를 실행
-  exam1();
-  exam2();
-  exam3();
 
 
 void exam1() {
   int a = 3;
   int b = 5;
-  int reselt = a * b;
-  int c = reselt;
+  int result = a * b;
+  int c = result;
   print('가로 $a, 세로 $b의 직사각형의 면적은 $c');
 }
 
@@ -64,7 +64,7 @@ void exam2() {
   int x = 10;
   if(isSample||x == 10){
     print("true");
-  } else{print("flase");
+  } else{print("false");
   }
   double z = 3.14;
   int y = 314159265853979;
@@ -72,4 +72,34 @@ void exam2() {
 }
 void exam3() {
   print('내 이름은 한석봉입니다.');
+}
+
+void exam() {
+  var names = ['한석봉', '한삭벙', '헌석봉'];
+
+      //반복문 For문 : 상위의 목록을 가지고 로직을 짤 때
+    for(var name in names) {
+      print('내 이름은 $name입니다.');
+  }
+}
+
+//1~20까지 출력
+//++ : 1증가
+void sample() {
+  for (int month = 1; month <=12; month++) {
+    print(month);
+  }
+
+//100번 실행
+  for (int i = 0; i < 100; i++) {
+    print('내 이름은 최준호');
+  }
+
+  int a = 1;
+  // == : 같은지 확인.
+  if (a > 5) {
+    print('5보다 크다');
+  } else {
+    print('보가 작다.');
+  }
 }
