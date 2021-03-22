@@ -27,14 +27,18 @@ void main() {
   List<int> ageList = [10, 20, 30];
   var ageList2 = [10, 20, 30]; // 모든걸 다 가능(가급적 정의하는게 좋으나 모르겠을 때 var를 쓰면 알아서 해줌)
 // 문자열 목록
-  List nameList = ['홍길동', '한성복'];
-  var nameList2 = ['홍길동', '한길동']
+  List nameList = ['홍길동', '한길동'];
+  var nameList2 = ['홍길동', '한길동'];
 //  null(값이 없다)
   int g; // null (0은 아님)
   // int g = 0 // 0
   g = 10; // null이 아니고 10
 
-  String nameList; // null
-
+  double tax = 1.1; // 세금
+  int fax = 5;  // 가격
+  print('$fax만원 짜리를 4만원으로 할인합니다.');
+  // tax = 4;
+  fax = 4;
+  print('팩스의 새로운 가격은(세금포함 ${fax * tax}만원!');
 
 }
