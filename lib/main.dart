@@ -1,116 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
 }
-
+//Flutter 앱 시작부분
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Counter',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'hello world'),
+      home: homepage(),
     );
   }
 }
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
+// stless
+// 아무것도 없는것 container()
+class homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+     appBar: AppBar(
+      title: Text('안녕'), 
+    ),
+      body: ListView(
+        children: [
+          TextField(),
+          TextField(),
+          ElevatedButton(onPressed: () {}, child: Text('Login')), //child: 텍스트
+          Text('hello world',
+          style: GoogleFont.lato(),
+          ),
+          Image.network('data:image/jpeg;base64,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')
+        ],
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              '누르면 올라감'
-            )
-            Text(
-              '누르면 올라감',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+      );
   }
 }

@@ -1,3 +1,4 @@
+//main 메서드 혹은 함수라고 부름
 void main() {
 //변수의 이름은 영어, _, 숫자 등으로 만든다.
   int a = 10; // 잘못된 이름
@@ -40,7 +41,35 @@ void main() {
   // tax = 4;
   fax = 4;
   print('팩스의 새로운 가격은(세금포함 ${fax * tax}만원!');
+}
+//exam1 함수를 만들었다.
+
+  // exam 함수를 실행
+  exam1();
+  exam2();
+  exam3();
 
 
+void exam1() {
+  int a = 3;
+  int b = 5;
+  int reselt = a * b;
+  int c = reselt;
+  print('가로 $a, 세로 $b의 직사각형의 면적은 $c');
+}
 
+void exam2() {
+  bool isSample = true;
+  bool iUunsample = false;
+  int x = 10;
+  if(isSample||x == 10){
+    print("true");
+  } else{print("flase");
+  }
+  double z = 3.14;
+  int y = 314159265853979;
+  String name = '항구를 공격! 적에게 15포인트의 데미지를 주었다';
+}
+void exam3() {
+  print('내 이름은 한석봉입니다.');
 }
