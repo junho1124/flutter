@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'dart:io';
+
 //main 메서드 혹은 함수라고 부름
 void main() {
   // exam 함수를 실행
@@ -40,7 +41,7 @@ void main() {
   g = 10; // null이 아니고 10
 
   final double tax = 1.1; // 세금
-  int fax = 5;  // 가격
+  int fax = 5; // 가격
   print('$fax만원 짜리를 4만원으로 할인합니다.');
   // tax = 4;
   fax = 4;
@@ -49,8 +50,6 @@ void main() {
   finalexam();
 }
 //exam1 함수를 만들었다.
-
-
 
 void exam1() {
   int a = 3;
@@ -64,14 +63,16 @@ void exam2() {
   bool isSample = true;
   bool iUunsample = false;
   int x = 10;
-  if(isSample||x == 10){
+  if (isSample || x == 10) {
     print("true");
-  } else{print("false");
+  } else {
+    print("false");
   }
   double z = 3.14;
   int y = 314159265853979;
   String name = '항구를 공격! 적에게 15포인트의 데미지를 주었다';
 }
+
 void exam3() {
   print('내 이름은 한석봉입니다.');
 }
@@ -79,16 +80,16 @@ void exam3() {
 void exam() {
   var names = ['한석봉', '한삭벙', '헌석봉'];
 
-      //반복문 For문 : 상위의 목록을 가지고 로직을 짤 때
-    for(var name in names) {
-      print('내 이름은 $name입니다.');
+  //반복문 For문 : 상위의 목록을 가지고 로직을 짤 때
+  for (var name in names) {
+    print('내 이름은 $name입니다.');
   }
 }
 
 //1~20까지 출력
 //++ : 1증가
 void sample() {
-  for (int month = 1; month <=12; month++) {
+  for (int month = 1; month <= 12; month++) {
     print(month);
   }
 
@@ -107,22 +108,25 @@ void sample() {
 }
 
 void dice() {
-    Random rng = Random(); {
-      print(rng.nextInt(6) + 1);  //1-6까지
-    }
+  Random rng = Random();
+  {
+    print(rng.nextInt(6) + 1); //1-6까지
   }
+}
 
 void finalexam() {
   print('점을 보세요.');
   print('이름을 입력 해 주세요.');
-    String Uname = stdin.readLineSync();
+  String Uname = stdin.readLineSync();
   print('나이를 입력 해 주세요.');
-    String ageString = stdin.readLineSync();
-    int age = int.parse(ageString);
-    Random A = Random();
-    int fortune = A.nextInt(4) + 1;
-    print('점괴가 나왔습니다!');
-    print('$age살의 ${Uname}씨, 당신의 운세번호는 $fortune입니다.');
-    print('1: 대박 2: 중박 3: 보통 4: 망');
-
+  String ageString = stdin.readLineSync();
+  int age = int.parse(ageString);
+  Random A = Random();
+  int fortune = A.nextInt(4) + 1;
+  print('점괴가 나왔습니다!');
+  print('$age살의 ${Uname}씨, 당신의 운세번호는 $fortune입니다.');
+  print('1: 대박 2: 중박 3: 보통 4: 망');
 }
+
+
+
