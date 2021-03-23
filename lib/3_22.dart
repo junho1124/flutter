@@ -124,7 +124,7 @@ void finalexam() {
   Random A = Random();
   int fortune = A.nextInt(4) + 1;
   print('점괴가 나왔습니다!');
-  print('$age살의 ${Uname}씨, 당신의 운세번호는 $fortune입니다.');
+  print('$age살의 $Uname씨, 당신의 운세번호는 $fortune입니다.');
   print('1: 대박 2: 중박 3: 보통 4: 망');
 }
 
