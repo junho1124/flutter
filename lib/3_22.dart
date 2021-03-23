@@ -115,15 +115,14 @@ void dice() {
 void finalexam() {
   print('점을 보세요.');
   print('이름을 입력 해 주세요.');
-    String name = stdin.readLineSync();
-    stdout.write(name);
+    String Uname = stdin.readLineSync();
   print('나이를 입력 해 주세요.');
-    String yourage = stdin.readLineSync();
-    stdout.write(yourage);
-    int age = int.parse('yourage');
-  Random A = Random(); {
-    print(A.nextInt(3) + 1);
-    int fortune = int.parse('A');
-  }
-  print('점괴가 나왔습니다!');
+    String ageString = stdin.readLineSync();
+    int age = int.parse(ageString);
+    Random A = Random();
+    int fortune = A.nextInt(4) + 1;
+    print('점괴가 나왔습니다!');
+    print('$age살의 ${Uname}씨, 당신의 운세번호는 $fortune입니다.');
+    print('1: 대박 2: 중박 3: 보통 4: 망');
+
 }
