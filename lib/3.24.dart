@@ -4,13 +4,11 @@
  // 그렇다고 아예 2.7 버전을 잊으면 안되는 것이 앞으로 우리가 해야 할 일은 구버전에서 신버전으로 업데이트 하는 과정 일 것이
 
  void main() {
-int kor = 100;
-int math = 50;
-int eng = 70;
-int scince = 50;
 
-int sum = total(kor, math, eng, scince);
-double average = avg(kor, math, eng, scince);
+List<int> scores = [100, 50, 70, 30]; // 과목이 추가되어도 그냥 숫자 하나만 더 넣으면 됨. List 뒤에 <>안에 목록의 종류가 뭔지 넣어 쓰는게 올바른 사용방법.
+
+int sum = total(scores[0], scores[1], scores[2], scores[3]);
+double average = avg(scores[0], scores[1], scores[2], scores[3]);
 
 print('합계 : $sum');
 print('평균 : ${average.toStringAsFixed(2)}');
@@ -21,7 +19,7 @@ int total(int kor, int math, int eng, int scince) {
 }
 
 double avg(int kor, int math, int eng, int scince) {
- return (kor + math + eng + scince) /4;
+ return total(kor, math, eng, scince) /4; // 다른 함수 안에서 다른 함수를 사용 할 수가 있다.
 }
 
 
