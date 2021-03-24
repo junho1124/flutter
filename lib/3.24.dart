@@ -21,6 +21,7 @@ void main() {
 
 int total(List<int> scores) {
   int resilt = 0;
+  //for 는 반복구문 for (미니멈; 맥시멈; 연산방법) 을 하면 연산방법에 맞춰 미니멈 -> 맥시멈 까지 반복한다.
   for (var i = 0; i < scores.length; i++) {
     resilt = resilt + scores[i];}
   return resilt;
