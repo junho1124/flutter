@@ -4,7 +4,7 @@ import 'dart:io';
 
 
 void main() {
-  email2(address : 'asda', text: 'fdafafdaf');
+ exam();
 }
 
 void intoduceOneslef() {
@@ -65,4 +65,18 @@ double calcCircleArea2(double radius) {
 
 double calcCircleArea3(double radius) {
   return double.parse((2 * pi * radius * radius).toStringAsFixed(2));
+}
+
+void exam() {
+  List<int> number = [3, 4, 9];
+  int result = 0;
+  print('1자리 숫자를 입력해 주세요.');
+  int input = int.parse(stdin.readLineSync());
+  for(int i = 0; i > number.length; i++) {
+    result = result + number[i];
+    if (input == number[i]) {
+      print('정답입니다.');
+    }else
+      print('오답입니다.');
+  }
 }

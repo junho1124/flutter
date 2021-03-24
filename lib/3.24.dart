@@ -3,7 +3,10 @@
 // 현재 우리가 배우고 있는 버전은 dart 2.7버전이지만 졸업 할 때는 2.12 버전에 익숙 해 져서 나가야됨
 // 그렇다고 아예 2.7 버전을 잊으면 안되는 것이 앞으로 우리가 해야 할 일은 구버전에서 신버전으로 업데이트 하는 과정 일 것이
 
+import 'dart:io';
+
 void main() {
+  exam();
   List<int> scores = [
     100,
     50,
@@ -36,18 +39,30 @@ int total(List<int> scores) {
   int resilt = 0;
   //for 는 반복구문 for (미니멈; 맥시멈; 연산방법) 을 하면 연산방법에 맞춰 미니멈 -> 맥시멈 까지 반복한다.
   for (var i = 0; i < scores.length; i++) {
-    resilt = resilt + scores[i];}
+    resilt = resilt + scores[i];
+  }
   return resilt;
 }
 
 double avg(List<int> scores) {
   return total(scores) / scores.length; // 다른 함수 안에서 다른 함수를 사용 할 수가 있다.
 }
+
 void exam() {
   List<int> number = [3, 4, 9];
-  print('1자리 숫자를 입력해 주세요.');
+  print('1자리의 숫자를 입력해 주세요.');
+  String text = stdin.readLineSync();
+  int input = int.parse(text);
+  for (int i = 0; i < number.length; i++) {
+    if (input == number[i]) {
+      print('정답입니다.');
+      break;
+    } else if (input != number[i]) {
+      print('오답입니다.');
+      break;
+    }
+  }
 }
-
 
 // 함수(funcfion) : 입력과 출력이 있고, 입력에 의한 출력값은 항상 동일하다.
 // 메소드(method) : 함수랑 형태는 동일. 입력에 의한 출력값이 다를 수 있다. 주로 어떤 기능을 정의할 때 메소드라고 부르기도 한다.void
@@ -64,13 +79,13 @@ void exam() {
 
 //List
 //- 동일한 타입의 변수들을 모아서 반복해서 뭔가를 할 때
-  //- List<int>
-  //- List<String>
+//- List<int>
+//- List<String>
 //- 동일한 타입니 아니어도 담을 수는 있다.
-  //- List
-  //- var
+//- List
+//- var
 //-정의
-  //- List<String> names = ['홍길동', '한석봉'];
+//- List<String> names = ['홍길동', '한석봉'];
 //- 가져다 쓰는것 (참조)
 //  - names[0] (index는 0부터 시작)
 //  - names[0] = ‘오준석’;
