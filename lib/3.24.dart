@@ -12,17 +12,8 @@ void main() {
   ]; // 과목이 추가되어도 그냥 숫자 하나만 더 넣으면 됨. List 뒤에 <>안에 목록의 종류가 뭔지 넣어 쓰는게 올바른 사용방법.
 
 
-  print(scores.length); // 리스트의 갯수
-
-// for (var i = 0; i < 10; i++) {
-//  print(i);
-// }
-
-    print(scores[i]); // i 가 1부터 +1씩 증가합에 따라 각 리스트를 불러옴
-  }
-
-  int sum = total(scores[0], scores[1], scores[2], scores[3]);
-  double average = avg(scores[0], scores[1], scores[2], scores[3]);
+  int sum = total(scores);
+  double average = avg(scores);
 
   print('합계 : $sum');
   print('평균 : ${average.toStringAsFixed(2)}');
@@ -35,8 +26,8 @@ int total(List<int> scores) {
   return resilt;
 }
 
-double avg(int kor, int math, int eng, int scince) {
-  return total(kor, math, eng, scince) / 4; // 다른 함수 안에서 다른 함수를 사용 할 수가 있다.
+double avg(List<int> scores) {
+  return total(scores) / scores.length; // 다른 함수 안에서 다른 함수를 사용 할 수가 있다.
 }
 
 
