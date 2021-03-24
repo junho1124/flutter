@@ -23,12 +23,13 @@ void email1(String title, String address, String text) {
   print('$address 에 메일을 전송한다.\n제목: $title\n내용: text');
 }
 
-// 오버로딩 : 상위 메소드에서 정의한 값을 하위 메소드에서 재정의 하는 것.(이라고 이해 했습니다……)
-void email(String title, String address, String text) {
-  String title = '제목없음';
-  print('$address 에 메일을 전송한다.\n제목: $title\n내용: text');
-}
+// 이건 오버로딩이 아님
+// void email(String title, String address, String text) {
+//   String title = '제목없음';
+//   print('$address 에 메일을 전송한다.\n제목: $title\n내용: text');
+// }
 
+//이것도 정상적 이라고는 할 수 없음.
 void email2({String title, String address, String text}) {
   print('$address 에 메일을 전송한다.');
 
