@@ -7,20 +7,21 @@
 int kor = 100;
 int math = 50;
 int eng = 70;
+int scince = 50;
 
-int sum = total(kor, math, eng);
-double average = avg(kor, math, eng);
+int sum = total(kor, math, eng, scince);
+double average = avg(kor, math, eng, scince);
 
 print('합계 : $sum');
 print('평균 : ${average.toStringAsFixed(2)}');
  }
 
-int total(int kor, int math, int eng) {
-  return kor + math + eng;
+int total(int kor, int math, int eng, int scince) {
+  return kor + math + eng + scince;
 }
 
-double avg(int kor, int math, int eng) {
- return (kor + math + eng) /3;
+double avg(int kor, int math, int eng, int scince) {
+ return (kor + math + eng + scince) /4;
 }
 
 
