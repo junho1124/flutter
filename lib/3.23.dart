@@ -9,7 +9,7 @@ void main() {
 int dice(int num) {
   // int dice: dice 라는 변수를 선언한다, dice 함수는 정수 num 하나를 받아서 1~num 까지의 정수를 반환한다. 즉 ()안에가 입력 앞에있는게 출력
   Random random = Random();
-  return random.nextInt(num) + 1; // class type(Random()) 코드는 1개당 일정 부분의 Ram 을 소비한다. 따라서 aksgdms random 값을 코딩 해야 할 때는  Random random = Random(); 코드를 넣어 주는 것이 좋다.
+  return random.nextInt(num) + 1; // class type(Random()) 코드는 1개당 일정 부분의 Ram 을 소비한다. 따라서 많은 random 값을 코딩 해야 할 때는  Random random = Random(); 코드를 넣어 주는 것이 좋다.
 }
 
 // int dice: dice 라는 변수를 선언한다, dice 함수는 정수 num 하나를 받아서 1~num 까지의 정수를 반환한다. 즉 ()안에가 입력 앞에있는게 출력
