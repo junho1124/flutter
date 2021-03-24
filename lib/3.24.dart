@@ -10,7 +10,20 @@ void main() {
     70,
     30
   ]; // 과목이 추가되어도 그냥 숫자 하나만 더 넣으면 됨. List 뒤에 <>안에 목록의 종류가 뭔지 넣어 쓰는게 올바른 사용방법.
-
+  //맨뒤에 30 추가
+  scores.add(30); //100, 50, 70, 30, 40
+  // 40을 뺀다
+  scores.remove(40); // 100, 50, 70, 30
+  //3번 인덱스값 삭제
+  scores.removeAt(3);
+  //맨 앞에 것 삭제
+  scores.removeAt(0);
+  //0번째에 35추가
+  scores.insert(0, 35);
+  //모두삭제
+  scores.clear();
+  //뒤에다가 다른 리스트 추가
+  scores.addAll([10, 20, 30]);
 
   int sum = total(scores);
   double average = avg(scores);
@@ -31,7 +44,7 @@ double avg(List<int> scores) {
   return total(scores) / scores.length; // 다른 함수 안에서 다른 함수를 사용 할 수가 있다.
 }
 
-
+List<int> number = [3, 4, 9];
 
 
 // 함수(funcfion) : 입력과 출력이 있고, 입력에 의한 출력값은 항상 동일하다.
