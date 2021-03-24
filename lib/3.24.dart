@@ -8,8 +8,8 @@ int kor = 100;
 int math = 50;
 int eng = 70;
 
-int sum = kor + math + eng;
-double average = (kor + math + eng) / 3;
+int sum = total(kor, math, eng);
+double average = avg(kor, math, eng);
 
 print('합계 : $sum');
 print('평균 : ${average.toStringAsFixed(2)}');
