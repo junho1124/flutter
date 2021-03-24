@@ -43,8 +43,10 @@ int total(List<int> scores) {
 double avg(List<int> scores) {
   return total(scores) / scores.length; // 다른 함수 안에서 다른 함수를 사용 할 수가 있다.
 }
-
-List<int> number = [3, 4, 9];
+void exam() {
+  List<int> number = [3, 4, 9];
+  print('1자리 숫자를 입력해 주세요.');
+}
 
 
 // 함수(funcfion) : 입력과 출력이 있고, 입력에 의한 출력값은 항상 동일하다.
@@ -57,5 +59,23 @@ List<int> number = [3, 4, 9];
 // argument (전달인자) : 실제로 전달되는 값
 
 //한수를 왜 만드냐??
-//-자주 사용되는 코드를 재사용
+//-자주 사용되는 코드를 재사용(함수에서 함수를 사용 할 수 있다.
 //-계산이 목적이다.
+
+//List
+//- 동일한 타입의 변수들을 모아서 반복해서 뭔가를 할 때
+  //- List<int>
+  //- List<String>
+//- 동일한 타입니 아니어도 담을 수는 있다.
+  //- List
+  //- var
+//-정의
+  //- List<String> names = ['홍길동', '한석봉'];
+//- 가져다 쓰는것 (참조)
+//  - names[0] (index는 0부터 시작)
+//  - names[0] = ‘오준석’;
+//- 반복문
+//  - 10회 반복
+//   - for (int i = 0; i < 10; i++)
+//  - 리스트 갯수만큼 반복
+//   - for (int i = 0; i < scores.length; i++)
