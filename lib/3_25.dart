@@ -46,19 +46,20 @@ class Cleric {
   final int maxMp = 10;
 
   void selfAid() {
-    int hill = hp + 5;
-    int mpminer = mp - 5;
+
     if (mp < 5) {
       print('mp 가 모자랍니다.');
-    }
-    hp = hill;
-    mp = mpminer;
-      if (mp < 0) {
-      mp = 0;
-    } else if (hp > maxHp) {
-      hp = maxHp;
+    }  else {
+      int hill = hp + 5;
+      int mpminer = mp - 5;
+      hp = hill;
+      mp = mpminer;
       print('Full hp now.'); //여기서부터 시작
     }
+    if (hp > maxHp) {
+      hp = maxHp;
+    }
+
   }
 
   void pray(int time) {
