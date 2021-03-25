@@ -53,15 +53,15 @@ void exam() {
   print('1자리의 숫자를 입력해 주세요.');
   String text = stdin.readLineSync();
   int input = int.parse(text);
-  for (int i = 0; i < number.length; i++) {
-    if (input == number[i]) {
-      print('정답입니다.');
-      break;
-    } else if (input != number[i]) {
-      print('오답입니다.');
-      break;
-    }
-  }
+  print(number.contains(input) ? '참' : '거짓'); // 한줄로 정리가 가능..! ctrl + B 눌러 확인가능
+  // for (int i = 0; i < number.length; i++) {
+  //   if (input == number[i]) {
+  //     print('정답입니다.');
+  //   } else if (input != number[i]) {
+  //     print('오답입니다.');
+  //     break; // for 문을 탈출, continue : for 문을 계속.
+  //   }
+  // }
 }
 
 // 함수(funcfion) : 입력과 출력이 있고, 입력에 의한 출력값은 항상 동일하다.
