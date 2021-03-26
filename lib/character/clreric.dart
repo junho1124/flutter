@@ -1,36 +1,37 @@
 import 'dart:math';
 
 class Cleric {
-  String name;
-  int hp;
+  String _name;
+  int _hp = 50;
+  int _mp = 10;
+  static final int maxHp = 50; // final : 상수
+  static final int maxMp = 10;
 
-  final int maxHp = 50; // final : 상수
-  int mp;
-  final int maxMp = 10;
+  Cleric(this._name, this._hp, this._mp);
 
   void selfAid() {
-    if (mp < 5) {
+    if (_mp < 5) {
       print('mp 가 모자랍니다.');
     } else {
-      int hill = hp + 5;
-      int mpminer = mp - 5;
-      hp = hill;
-      mp = mpminer;
+      int hill = _hp + 5;
+      int mpminer = _mp - 5;
+      _hp = hill;
+      _mp = mpminer;
       print('Full hp now.'); //여기서부터 시작
     }
-    if (hp > maxHp) {
-      hp = maxHp;
+    if (_hp > maxHp) {
+      _hp = maxHp;
     }
   }
 
   void pray(int time) {
     {
       int mpHill = time + dice(3, 5);
-      mp = mp + mpHill;  // mp = min(maxMp, mp + mpHill)
-      if (mp > maxMp) {
-        mp = maxMp;
-      } else if (mp < 0) {
-        mp = 0;
+      _mp = _mp + mpHill;  // mp = min(maxMp, mp + mpHill)
+      if (_mp > maxMp) {
+        _mp = maxMp;
+      } else if (_mp < 0) {
+        _mp = 0;
       }
       print('MP + $mpHill');
     }

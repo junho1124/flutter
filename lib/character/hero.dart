@@ -15,7 +15,7 @@ class Hero {
   Sword sword;
 
   // 생성자 (constructor)
-  Hero(this._name, this._hp);
+  Hero(this._name, this._hp, this.sword);
 
   // 외부에서 읽기 위해 제공하는 프로퍼티
   int get hp => _hp;
