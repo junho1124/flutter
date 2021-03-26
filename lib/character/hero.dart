@@ -1,6 +1,13 @@
 import 'package:flutter_app/eqipment/sword.dart';
 
+// 프로그램 전채적으로 공유
+// 좋은 방법은 아니다...
+// top level 변수
+int money = 100;
+
 class Hero {
+  //공유자원
+  static int money = 100;
 
   // field, global variable, 전역변수
   String _name; // "_(변수이름)" 아무나 변수에 접촉 및 조작을 못하게 막는 것
