@@ -21,5 +21,7 @@ void main() {
 
   // hp 프로퍼티 (property
   print(hero.hp);
+
+  Cleric cleric = Cleric('아서스', 50, 10);
 }
 
