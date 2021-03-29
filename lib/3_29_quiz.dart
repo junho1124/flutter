@@ -1,6 +1,7 @@
 void main() {
   Word word = Word('abcdefg');
 
+
   print(word.isVowel((0)));
   print(word.isVowel((1)));
   print(word.isVowel((2)));
@@ -30,16 +31,39 @@ class Word {
     String ch = letters.substring(i, i + 1);
     bool result = false;
     for (var i = 0; i < str.length; i++) {
-      if(ch == str[i]) {
+      if (ch == str[i]) {
         result = true;
         break;
       }
     }
+
     return result;
   }
+}
 
-  // i번째 글자가 자음이면 true
-  bool isConsonant(int i) {
-    return false;
+
+class Word2 {
+  String letters;
+
+  Word(this.letters);
+
+  bool isVowel(int i) {
+    List<String> str = ['a', 'i', 'u', 'e', 'o', 'A', 'I', 'U', 'E', 'O'];
+    String ch = letters.substring(i, i + 1);
+    bool result = true;
+    for (var i = 0; i < str.length; i++) {
+      if (ch == str[i]) {
+        result = false;
+        break;
+      }
+    }
+
+    return result;
   }
 }
+
+
+
+
+
+
