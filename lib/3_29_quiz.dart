@@ -1,5 +1,5 @@
 void main() {
-  Word word = Word('abcdefg');
+  Word word = Word('abcdefg'); // 밑에서 생성한 생성자를  여기서 호출 한것.
 
 
   print(word.isVowel((0)));
@@ -42,25 +42,6 @@ class Word {
 }
 
 
-class Word2 {
-  String letters;
-
-  Word(this.letters);
-
-  bool isVowel(int i) {
-    List<String> str = ['a', 'i', 'u', 'e', 'o', 'A', 'I', 'U', 'E', 'O'];
-    String ch = letters.substring(i, i + 1);
-    bool result = true;
-    for (var i = 0; i < str.length; i++) {
-      if (ch == str[i]) {
-        result = false;
-        break;
-      }
-    }
-
-    return result;
-  }
-}
 
 
 
