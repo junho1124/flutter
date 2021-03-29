@@ -11,6 +11,8 @@ void main() {
   //공유 자원 사용
   Hero.money = Hero.money - 10;
 
+
+
   // 칼을 하나 생성
   Sword sword = Sword('불의 검', 50, 100, '불을 뿜는 검.');
 
