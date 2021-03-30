@@ -5,7 +5,6 @@ void main() {
   print(exam.division(130, 3));
   print(exam.division(10, 3));
   print(exam.division(12, 14));
-
 }
 
 class Math {
