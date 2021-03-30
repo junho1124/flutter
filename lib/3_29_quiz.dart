@@ -11,6 +11,8 @@ void main() {
   // print(word.isVowel((6)));
 }
 
+// 오답과 수정본
+
 // class Word {
 //   String letters;
 //
@@ -71,6 +73,20 @@ class Word {
       }
       break;
     }
+
+
+// 내 방법의 또 다른 표시 법
+
+// List<String> es = ['o', 's', 'x', 'ch', 'sh'];
+// for (int i = 0; i < es.length; i++) {
+//   bool isLast1 = es[i] == letters.substring(letters.length - 1, letters.length);
+//   bool isLast2 = es.elementAt(i) == letters.substring(letters.length - 2, letters.length);
+//   if (isLast1 || isLast2) {
+//     return letters + 'es';
+//   }
+// }
+
+
     List<String> ves = ['f', 'fe'];
 
     for (int i = 0; i < es.length; i++) {
@@ -90,3 +106,27 @@ class Word {
     return letters + 's';
   }
 }
+
+// 좋은 습관 => 리턴은 마지막에..! result 활용하기
+
+// String toPlural() {
+//   String result = '${letters}s';
+//   // s, x, ch, sh : -es
+//   if (letters.endsWith('s') ||
+//       letters.endsWith('x') ||
+//       letters.endsWith('ch') ||
+//       letters.endsWith('sh') ||
+//       letters.endsWith('o')) {
+//     result = '${letters}es';
+//   } else if (letters.endsWith('f')) {
+//     // f -> ves
+//     result = '${letters.substring(0, letters.length - 1)}ves';
+//   } else if (letters.endsWith('fe')) {
+//     // fe -> ves
+//     result = '${letters.substring(0, letters.length - 2)}ves';
+//   } else if (isConsonant(letters.length - 2) && letters.endsWith('y')) {
+//     // 자음 + y : y -> ies
+//     result = '${letters.substring(0, letters.length - 1)}ies';
+//   }
+//   return result;
+// }
