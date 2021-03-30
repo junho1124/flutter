@@ -8,13 +8,12 @@ void main() {
 
 class Math {
   String numbers(int a, int b) {
-    String result = ' ';
+    String result = 'eq';
 
     if (a != b) {
       int d = max(a, b);
       result = '$d';
-    } else if (a == b) {
-      result = 'eq';
-    } return result;
+    } else if (a == b) {}
+    return result;
   }
 }
