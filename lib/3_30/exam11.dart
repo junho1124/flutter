@@ -46,6 +46,7 @@ class Math {
     for (int i = 0; i < alphabet.length; i++) {
       if (alphabet.elementAt(i) == s) {
         result = '${i + 1}';
+        break;
       }
     }
 
