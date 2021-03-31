@@ -14,9 +14,9 @@ class Math {
     int m = n * 100;
     int cm = n * 10;
     if (b == 'km') {
-      result = '$km';
+      result = '${km * m * cm}';
     } else if (b == 'm') {
-      result = '$m';
+      result = '${m * cm}';
     } else if (b == 'cm') {
       result = '$cm';
     }

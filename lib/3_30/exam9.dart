@@ -11,8 +11,8 @@ class Math {
   String numbers(int a, int b) {
     String result = '';
     for (int i = 0; i < 10; i++) {
-      int funtion = a + b * i;
-      result += '$funtion ';
+      int temp = a + b * i;
+      result += '$temp ';
     }
     return result;
   }

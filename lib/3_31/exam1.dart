@@ -9,7 +9,7 @@ void main() {
 class Qiaiet {
 
   // 첫번 째 줄에는 세개의 정수 a, b, R 을 입력
-  String range(int a, int b, int R) { // a: x좌표, b: y좌표, R: 공사현장의 소음의 크
+  String range(int a, int b, int R) { // a: x좌표, b: y좌표, R: 공사현장의 소음의 크기 
     int x;
     int y;
     String result = ' ';
