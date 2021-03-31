@@ -10,15 +10,41 @@ void main() {
   print(exam.range('E'));
   print(exam.range('T'));
   print(exam.range('Y'));
-
 }
 
 class Math {
   String range(String s) {
-    List<String> alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K' 'L' 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T','U', 'V', 'W', 'X', 'Y', 'Z'];
+    List<String> alphabet = [
+      'A',
+      'B',
+      'C',
+      'D',
+      'E',
+      'F',
+      'G',
+      'H',
+      'I',
+      'J',
+      'K',
+      'L',
+      'M',
+      'N',
+      'O',
+      'P',
+      'Q',
+      'R',
+      'S',
+      'T',
+      'U',
+      'V',
+      'W',
+      'X',
+      'Y',
+      'Z'
+    ];
     String result = '';
     for (int i = 0; i < alphabet.length; i++) {
-      if(alphabet.elementAt(i) == s) {
+      if (alphabet.elementAt(i) == s) {
         result = '${i + 1}';
       }
     }
