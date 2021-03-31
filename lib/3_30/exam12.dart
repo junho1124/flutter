@@ -9,10 +9,6 @@ void main() {
 
 class Math {
   int range(int n) {
-    int result = n;
-    if (n < 0) {
-      result = n.abs();
-    }
-    return result;
+    return n.abs();
   }
 }
