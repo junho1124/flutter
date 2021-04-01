@@ -9,8 +9,6 @@ void main() {
 
 class Word {
   String firstText(List<String> input) {
-    String result = '';
-    result = '${input[0][0]}.${input[1][0]}';
-    return result;
+    return '${input[0][0]}.${input[1][0]}';
   }
 }
