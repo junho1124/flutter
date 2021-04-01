@@ -1,48 +1,48 @@
-void main() { // 안돌아감
-  Math exam = Math();
-  print(exam.numbers('5555'));
-  print(exam.numbers('3335'));
-}
-
-class Math {
-  String numbers(String n) {
-    String result = 'no';
-
-    for (int i = 0; i < n.length; i++) {
-      if (n.substring(n.length - 1, n.length) ==
-          n.substring(n.length - 1 - i, n.length - i)) {
-        return result = n;
-      }
-    }
-
-    return result = 'no';
-  }
-}
-
-
-// 내거 회생
-
-// void main() {
+// void main() { // 안돌아감
 //   Math exam = Math();
 //   print(exam.numbers('5555'));
 //   print(exam.numbers('3335'));
 // }
+//
 // class Math {
 //   String numbers(String n) {
-//     String result = n;
-//     for (int i = 0; i < n.length - 1; i++) {
-//       if (getCharacter(n, i) !=
-//           getCharacter(n, i + 1)) {
-//         result = 'No';
-//         break;
+//     String result = 'no';
+//
+//     for (int i = 0; i < n.length; i++) {
+//       if (n.substring(n.length - 1, n.length) ==
+//           n.substring(n.length - 1 - i, n.length - i)) {
+//         return result = n;
 //       }
 //     }
-//     return result;
-//   }
-//   String getCharacter(String str, int i) {
-//     return str.substring(i, i + 1);
+//
+//     return result = 'no';
 //   }
 // }
+
+
+//내거 회생
+
+void main() {
+  Math exam = Math();
+  print(exam.numbers('5555'));
+  print(exam.numbers('3335'));
+}
+class Math {
+  String numbers(String n) {
+    String result = n;
+    for (int i = 0; i < n.length - 1; i++) {
+      if (getCharacter(n, i) !=
+          getCharacter(n, i + 1)) {
+        result = 'No';
+        break;
+      }
+    }
+    return result;
+  }
+  String getCharacter(String str, int i) {
+    return str.substring(i, i + 1);
+  }
+}
 
 
 
