@@ -71,44 +71,15 @@ void exam4() {
 
 void exam5() {
   Math math = Math();
-  // print(math.solution(30, 90));
-  // print(math.dice(1));
-  // print(math.cut('4434'));
-  // List<String> hello = stdin.readLineSync()!.split(' ');
-  // print(math.plus(hello));
-  print(math.numbers(3, 3));
+  print(math.numbers(3, 5));
 }
 
 class Math {
-  int solution(int a, int b) {
-    return 180 - a - b;
-  }
 
-  int dice(int a) {
-    return 7 - a;
-  }
-
-  String cut(String n) {
-    String result = n;
-    for (int i = 0; i < result.length - 1; i++) {
-      if (result.substring(i, i + 1) != result.substring(i + 1, i + 2)) {
-        return result = 'no';
-      }
-    }
-    return result;
-  }
-
-  String plus(List<String> hi) {
-    String result = '';
-    for (int i = 0; i < hi.length - 1; i++) {
-      result += '${hi.elementAt(i)}, ';
-    }
-    return 'hello $result${hi.elementAt(hi.length - 1)}.';
-  }
 
   String numbers(int m, int n) {
     String result = '';
-    for (int i = 0; 0 < 10; i++) {
+    for (int i = 0; i < 10; i++) {
       int temp = m + n * i;
       result += '$temp ';
     }
