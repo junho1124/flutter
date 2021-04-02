@@ -5,7 +5,7 @@ void main() {
   // 1 2 3 4 5
   List<String> oneLine = stdin.readLineSync()!.split(' ');
   // 1 2 3 4 5
-  List<int> oneLine2 = stdin.readLineSync()!.split(' ').map((e) => int.parse(e));
+  List<int> oneLine2 = stdin.readLineSync()!.split(' ').map((e) => int.parse(e)).toList();
   // 여러줄로 입력할 때
   /// 1
   /// 2
