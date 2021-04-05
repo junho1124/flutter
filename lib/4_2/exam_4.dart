@@ -1,7 +1,7 @@
 void main() {
   Math exam = Math();
   print(exam.numbers('5555'));
-  print(exam.numbers('3335'));
+  print(exam.numbers('1112'));
 }
 class Math {
   String numbers(String n) {
@@ -16,6 +16,6 @@ class Math {
     return result;
   }
   String getCharacter(String str, int i) {
-    return str.substring(i, i + 1);
+    return str[i];
   }
 }

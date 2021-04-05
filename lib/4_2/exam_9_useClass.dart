@@ -15,11 +15,10 @@ void main() {
     Row row = new Row(); // row 라는 이름을 가진 새로운 Row 객체 인스턴스 생성
     row.pixels = inputLine; //inputLine 값을 인스턴스 row 의 pixels 함수에 저장
 
-    // 한줄을 이미지 정보에 추가
     image.rows.add(row); // row 값을 인스턴스 image 의 rows 함수에 추가
   }
 
-  print(image.print()); // 인스턴스 image 의 print 함수의 리턴값을 출력
+  print(image.print()); // 객체 image 의 print 함수의 리턴값을 출력
 
 }
 
